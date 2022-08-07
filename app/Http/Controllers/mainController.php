@@ -30,7 +30,8 @@ class mainController extends Controller
         -> join('details', 'books.id', '=', 'details.book_id')
         -> where('books.category_id', '2')
         -> get();
-        
+
+        return view('fantasyCategory', ['data'=>$data]);
     }
 
     public function horrorCategory(){
